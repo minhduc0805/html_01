@@ -14,6 +14,7 @@ body {
 /* common */
 a {
     text-decoration: none;
+    color: #000;
 }
 
 .btn {
@@ -32,22 +33,40 @@ a {
 /* header */
 
 .header {
+    position: relative;
+    margin-top: 0;
+    display: flex;
     /* background-color: green; */
     height: 100vh;
     background: #e6f0ff;
 }
 
 .content {
+    /* position: relative; */
     width: 1110px;
     max-width: calc(100% - 48px);
     margin-left: auto;
     margin-right: auto;
 }
-
+.fixed-header {
+    background: #e6f0ff;
+    position: sticky;
+    padding-top: 20px;
+    top: -26px;
+    z-index: 1;
+}
 .navbar {
+    width: 1110px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+    /* position: absolute; */
+    z-index: 1;
     display: flex;
     align-items: center;
-    padding-top: 38px;
+    padding-top: 2rem;
+    padding-bottom: 3rem;    
+    border-radius: 3px;
 }
 .navbar ul {
     display: flex;
@@ -76,10 +95,16 @@ a {
     border-radius: 8px;
 }
 .hero {
+    display: flex;
+    height: 70%;
     margin-top: 130px;
 }
 .hero .info {
+    display: flex;
+    flex-direction: column;
     width: 50%;
+    align-items: flex-start;
+    justify-content: center;
 }
 .hero .sub-title {
     font-size: 1.8rem;
@@ -109,6 +134,7 @@ a {
     border-radius: 12px;
 }
 .hero-img {
+    width: 70rem;
     position: absolute;
     right: calc((100vw - 1110px) / 2 - 100px);
     bottom: 0;
@@ -130,6 +156,11 @@ a {
     margin-top: 6.42rem;
     justify-content: space-between;
 }
+.img_brand a{
+    display: flex;
+    align-items: center;
+}
+
 .guides {
     margin-top: 200px;
 }
@@ -217,7 +248,8 @@ a {
     color: #0689ff;
 }
 .featured .list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
     margin-top: 7rem;
     gap: 30px;
@@ -285,10 +317,12 @@ a {
     width: 50%;
 }
 .stats .img-block .img {
-    width: 80rem;
+    display: block;
+    max-width: 100%;
     object-fit: cover;
     border-radius: 12px;
     margin-left: 10rem;
+    background: transparent;
 }
 .stats .info {
     padding: 17rem 0 0 16rem;
@@ -402,7 +436,7 @@ a {
     justify-content: space-between;
 }
 .footer .row-top {
-    gap: 185px;
+    gap: 14rem;
 }
 .footer .heading {
     color: #1c1c1d;
@@ -421,4 +455,8 @@ a {
 
 .footer .item a{
     white-space:nowrap;
+
+}
+.footer .item a:hover{
+    text-decoration: underline;
 }
