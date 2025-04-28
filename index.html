@@ -27,7 +27,15 @@
                     </svg>
                 </label>
                 <!-- logo -->
-                <img src="./assets/img/Logo.svg" class="logo" alt="" />
+                <img src="./assets/img/Logo.svg" class="logo" alt="" onclick="scrollToTop()"/>
+                <script>
+                    function scrollToTop() {
+                      window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth' // hiệu ứng cuộn mượt
+                      });
+                    }
+                    </script>
                 <!-- navigation -->
                 <ul id="mobile-nav">
 
